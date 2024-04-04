@@ -84,7 +84,7 @@ public:
         }
     }
     int partitioned(T tab[], int left, int right){
-        int pivot = tab[left];
+        T pivot = tab[left];
         int l=left; int r = right;
         while(true){
             while(tab[l]<pivot){l++;}
