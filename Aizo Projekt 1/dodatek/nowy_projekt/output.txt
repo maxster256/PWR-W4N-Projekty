@@ -1,0 +1,5 @@
+Measured time in nanoseconds:
+589900
+1.38864e+006
+2.08669e+006
+

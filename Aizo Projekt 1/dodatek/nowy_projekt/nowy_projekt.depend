@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1714577894 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\nowy_projekt\main.cpp
+	<iostream>
+	<ctime>
+	<chrono>
+	<stdlib.h>
+	<fstream>
+	<cstdlib>
+	<algorithm>
+	"menu_class.h"
+
+1714577940 c:\users\jakub smolarczyk\desktop\codeblock\c++\nowy_projekt\menu_class.h
+	"input_class.h"
+	"options_class.h"
+
+1714577745 c:\users\jakub smolarczyk\desktop\codeblock\c++\nowy_projekt\input_class.h
+
+1714833177 c:\users\jakub smolarczyk\desktop\codeblock\c++\nowy_projekt\options_class.h
+	"input_class.h"
+	"sortings_class.h"
+
+1714833484 c:\users\jakub smolarczyk\desktop\codeblock\c++\nowy_projekt\sortings_class.h
+	"input_class.h"
+
+1714577894 source:c:\users\jakub smolarczyk\desktop\dodatek\nowy_projekt\main.cpp
+	<iostream>
+	<ctime>
+	<chrono>
+	<stdlib.h>
+	<fstream>
+	<cstdlib>
+	<algorithm>
+	"menu_class.h"
+
+1714577940 c:\users\jakub smolarczyk\desktop\dodatek\nowy_projekt\menu_class.h
+	"input_class.h"
+	"options_class.h"
+
+1714577745 c:\users\jakub smolarczyk\desktop\dodatek\nowy_projekt\input_class.h
+
+1714836286 c:\users\jakub smolarczyk\desktop\dodatek\nowy_projekt\options_class.h
+	"input_class.h"
+	"sortings_class.h"
+
+1714834068 c:\users\jakub smolarczyk\desktop\dodatek\nowy_projekt\sortings_class.h
+	"input_class.h"
+
