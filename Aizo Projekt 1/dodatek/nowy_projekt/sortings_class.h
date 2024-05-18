@@ -73,7 +73,7 @@ public:
     void ShellSort1(T tab[], int n){
         for (int gap = n/2; gap > 0; gap /= 2) {
             for (int i = gap; i < n; i += 1) {
-                int temp = tab[i];
+                auto temp = tab[i];
                 int j;
                 for (j = i; j >= gap && tab[j-gap] > temp; j -= gap){
                     tab[j] = tab[j-gap];
@@ -90,7 +90,7 @@ public:
         interval--;                         // uzyskanie 2^k - 1
         for (int gap = interval; gap > 0; gap /= 2) {
             for (int i = gap; i < n; i += 1) {
-                int temp = tab[i];
+                auto temp = tab[i];
                 int j;
                 for (j = i; j >= gap && tab[j-gap] > temp; j -= gap){
                     tab[j] = tab[j-gap];
