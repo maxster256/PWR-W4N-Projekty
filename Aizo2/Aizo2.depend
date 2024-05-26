@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1716758031 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\main.cpp
+	"Menu.h"
+
+1716758104 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\input.h
+
+1716758072 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\menu.cpp
+	<iostream>
+	"Menu.h"
+	"Options.h"
+
+1716757978 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\menu.h
+	"Input.h"
+
+1716757742 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\options.cpp
+	<iostream>
+	"Options.h"
+
+1716757647 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\options.h
+	"Input.h"
+
+1716757284 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\input.cpp
+	<iostream>
+	<algorithm>
+	"Input.h"
+
