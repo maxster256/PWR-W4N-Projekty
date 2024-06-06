@@ -1,5 +1,3 @@
-#include <iostream>
-#include <algorithm>
 #include "Input.h"
 
 int Input::inputLoop(int minimum, int maksimum){

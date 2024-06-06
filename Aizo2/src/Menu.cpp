@@ -1,8 +1,4 @@
-#include <iostream>
 #include "Menu.h"
-#include "Options.h"
-
-int option = -1;
 
 void Menu::init_menu(){
     std::cout << "#################################################################\n";
@@ -17,15 +13,27 @@ bool Menu::option_menu(){
     if (option == 0)   {return false;}
     return true;
 }
+bool Menu::choose_problem(){
+    std::cout << "Wybierz rodzaj problemu do zbadania:\n(1) Wyznaczanie minimalnego drzewa rozpinajacego\n(2) Wyznaczanie najkrotszej sciezki w grafie\n\n(0) Wyjscie z programu\n";
+    problem = inputLoop(0,2);
+    if (problem == 0){
+            return false;
+    }
+    return true;
+}
 void Menu::menu_options(){
     Options choosenOption;
+    if(!choose_problem()){
+            return;
+    }
+    system("CLS");
     while(true){
         if(!option_menu()) {break;}
         switch(option){
-            case 1: choosenOption.load_graph(); break;
-            case 2: choosenOption.generate_graph(); break;
+            case 1: if(!choosenOption.load_graph(problem)){return;} break;
+            case 2: choosenOption.generate_graph_info(problem); break;
             case 3: choosenOption.show_graph(); break;
-            case 4: choosenOption.choose_algorithm(); break;
+            case 4: choosenOption.choose_algorithm(problem); break;
             default: break;
         }
         system("PAUSE");
