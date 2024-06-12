@@ -4,7 +4,7 @@ void ListGraph::setGraph(int V, int E){
     this->V = V;
     this->E = 2*E;
     arr = new AdjList[V];
-    for (int i = 0; i < V; ++i) {
+    for(int i = 0; i < V; i++) {
         arr[i].head = nullptr;
     }
 }
@@ -35,7 +35,7 @@ void ListGraph::addDirectedEdge(int src, int dest, int weight){
 }
 
 void ListGraph::printGraph(){
-    printf("Lista sasiedztwa:\n");
+    printf("Lista sasiedztwa: (Cel:Waga)\n");
     for(int v = 0; v < V; v++){
         AdjListNode* pCrawl = arr[v].head;
         printf("Nastepnicy wierzcholka %d:",v);
@@ -49,7 +49,7 @@ void ListGraph::printGraph(){
 
 ListGraph::~ListGraph(){
     if(arr != nullptr){
-        for (int v = 0; v < V; ++v){
+        for (int v = 0; v < V; v++){
             AdjListNode* current = arr[v].head;
             while (current != nullptr) {
                 AdjListNode* next = current->next;
