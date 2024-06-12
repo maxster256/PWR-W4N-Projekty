@@ -15,6 +15,11 @@
 					<Add option="-g" />
 					<Add directory="include" />
 				</Compiler>
+				<Linker>
+					<Add option="-static-libstdc++" />
+					<Add option="-static-libgcc" />
+					<Add option="-static" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Aizo2" prefix_auto="1" extension_auto="1" />
@@ -34,13 +39,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/IncidenceGraph.h" />
 		<Unit filename="include/Input.h" />
+		<Unit filename="include/ListGraph.h" />
+		<Unit filename="include/MST.h" />
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/Options.h" />
+		<Unit filename="include/Shortest_path.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/IncidenceGraph.cpp" />
 		<Unit filename="src/Input.cpp" />
+		<Unit filename="src/ListGraph.cpp" />
+		<Unit filename="src/MST.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/Options.cpp" />
+		<Unit filename="src/Shortest_path.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

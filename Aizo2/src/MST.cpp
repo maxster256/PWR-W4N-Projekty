@@ -17,15 +17,16 @@ void MST::Prim(IncidenceGraph &graph, bool show_res){
 
     for(int x=0;x<vertices;x++){
         int u = -1;
+        // wybieranie kolejnego wierzcholka bez uzycia kolejki
         for(int i=0;i<vertices;i++) {
             if (!visited[i] && (u==-1 || key[i]<key[u])){u = i;}
         }
         visited[u] = true;
 
         for(int e=0;e<edges;e++){
-            if(graph.incMatrix[u][e]!=0){
-                for(int v=0;v<vertices;v++){
-                    if(u!=v && !visited[v] && graph.incMatrix[v][e] == 1 && graph.incMatrix[u][e] * graph.weights[e] < key[v]){
+            if(graph.incMatrix[u][e]==1){ //jesli istnieje krawedz z wybranego wierzcholka
+                for(int v=0;v<vertices;v++){ //odnalezienie konca krawedzi
+                    if(!visited[v] && graph.incMatrix[v][e] == 1 && graph.incMatrix[u][e] * graph.weights[e] < key[v]){
                         key[v] = graph.incMatrix[u][e] * graph.weights[e];
                         p[v] = u;
                     }
@@ -35,6 +36,7 @@ void MST::Prim(IncidenceGraph &graph, bool show_res){
     }
 
     if(show_res){
+        printf("\n\n=== Reprezentacja macierzowa ===\n");
         printf("Uzyskane drzewo\n\n0 jest wierzcholkiem poczatkowym\n");
         int sum = 0;
         for(int i=1;i<vertices;i++){
@@ -42,7 +44,8 @@ void MST::Prim(IncidenceGraph &graph, bool show_res){
             sum+=key[i];
         }
 
-        printf("Calkowita waga drzewa: %d\n\n",sum);
+        printf("Calkowita waga drzewa: %d",sum);
+        printf("\n\n================================\n");
     }
 }
 
@@ -52,8 +55,8 @@ void MST::Kruskal(IncidenceGraph &graph, bool show_res){
 
     int p[vertices];
     int ranks[vertices];
-    int sortedEdgesID[edges];
-    int finaltree[vertices-1];
+    int sortedEdgesID[edges]; //tablica przechowujaca indeksy krawedzi posortowanych
+    int finaltree[vertices-1]; // tablica do przechowania indeksow krawedzi tworzacych drzewo MST
     for(int v=0;v<vertices;v++){
         p[v] = v;
         ranks[v] = 0;
@@ -61,26 +64,28 @@ void MST::Kruskal(IncidenceGraph &graph, bool show_res){
     for(int e=0;e<edges;e++){
         sortedEdgesID[e]=e;
     }
-
+    //wykonanie sortowania krawedzi (sortowaniem szybkim)
     sortEdgesByQuick(graph.weights,sortedEdgesID,0,edges-1);
 
     int treeEdge = 0;
     for(int e=0;e<edges;e++){
         int u = -1, v = -1,vert = 0;
-        do{
+        do{ //petla do znalezienia zrodla i konca aktualnie rozpatrywanej krawedzi
             if(graph.incMatrix[vert][sortedEdgesID[e]] != 0){
                 if(u != -1){v = vert; break;}
                 u = vert;
             }
             vert++;
         }while(u == -1 || v == -1);
+        //sprawdzenie czy grafu do ktorych naleza wierzcholki sa juz polaczone
         if(FindSet(u,p) != FindSet(v,p)){
-            finaltree[treeEdge] = sortedEdgesID[e];
+            finaltree[treeEdge] = sortedEdgesID[e]; //dodanie krawedzi do rozwiazania
             treeEdge++;
-            Union(u,v,p,ranks);
+            Union(u,v,p,ranks); //laczenie grafow, ktorych czescia sa wierzcholki
         }
     }
     if(show_res){
+        printf("\n\n=== Reprezentacja macierzowa ===\n");
         printf("Krawedzie tworzace drzewo:\n");
         int totalWeight = 0;
         for(int e=0;e<edges;e++){
@@ -95,7 +100,8 @@ void MST::Kruskal(IncidenceGraph &graph, bool show_res){
                 }
             }
         }
-        printf("Calkowita waga drzewa to %d\n\n",totalWeight);
+        printf("Calkowita waga drzewa to %d",totalWeight);
+        printf("\n\n================================\n");
     }
 }
 
@@ -115,13 +121,14 @@ void MST::Prim_L(ListGraph &graph, bool show_res){
 
     for(int x=0;x<vertices;x++){
         int u = -1;
+        // wybieranie kolejnego wierzcholka bez uzycia kolejki
         for(int i=0;i<vertices;i++) {
             if (!visited[i] && (u==-1 || key[i]<key[u])){u = i;}
         }
         visited[u] = true;
 
         AdjListNode* neighborNodes = graph.arr[u].head;
-        while(neighborNodes){
+        while(neighborNodes){ //sprawdzenie wszystkich krawedzi wychodzacych z aktualnego wierzcholka
             int node = neighborNodes->dest;
             if(u!=node && !visited[node] && neighborNodes->weight < key[node]){
                 key[node] = neighborNodes->weight;
@@ -131,13 +138,15 @@ void MST::Prim_L(ListGraph &graph, bool show_res){
         }
     }
     if(show_res){
+        printf("\n\n==== Reprezentacja listowa ====\n");
         printf("Uzyskane drzewo\n\n0 jest wierzcholkiem poczatkowym\n");
         int sum = 0;
         for(int i=1;i<vertices;i++){
             printf("Krawedz %d - %d | waga krawedzi: %d\n",i,p[i],key[i]);
             sum+=key[i];
         }
-        printf("Calkowita waga drzewa: %d\n\n",sum);
+        printf("Calkowita waga drzewa: %d",sum);
+        printf("\n\n==============================\n");
     }
 }
 
@@ -147,9 +156,9 @@ void MST::Kruskal_L(ListGraph &graph, bool show_res){
 
     int p[vertices];
     int ranks[vertices];
-
+    int finaltree[vertices-1]; //tablica do przechowania indeksow krawedzi tworzacych rozwiazanie
     int sortedEdgesID[edges];
-    AdjListNode* listed_edges[edges];
+    AdjListNode* listed_edges[edges]; //tablica do przechowania wszystkich polaczen w postaci latwej do sortowania
 
     int index = 0;
     AdjListNode* nod;
@@ -162,7 +171,6 @@ void MST::Kruskal_L(ListGraph &graph, bool show_res){
         }
     }
 
-    int finaltree[vertices-1];
     for(int v=0;v<vertices;v++){
         p[v] = v;
         ranks[v] = 0;
@@ -175,7 +183,7 @@ void MST::Kruskal_L(ListGraph &graph, bool show_res){
 
     int treeEdge = 0;
     for(int e=0;e<edges;e++){
-
+        // poczatek oraz koniec polaczenia pobierany ze struktury
         int u = listed_edges[sortedEdgesID[e]]->source;
         int v = listed_edges[sortedEdgesID[e]]->dest;
 
@@ -186,6 +194,7 @@ void MST::Kruskal_L(ListGraph &graph, bool show_res){
         }
     }
     if(show_res){
+        printf("\n\n==== Reprezentacja listowa ====\n");
         printf("Krawedzie tworzace drzewo:\n");
         int totalWeight = 0;
         for(int e=0;e<edges;e++){
@@ -196,7 +205,8 @@ void MST::Kruskal_L(ListGraph &graph, bool show_res){
                 }
             }
         }
-        printf("Calkowita waga drzewa to %d\n\n",totalWeight);
+        printf("Calkowita waga drzewa to %d",totalWeight);
+        printf("\n\n==============================\n");
     }
 }
 

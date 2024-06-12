@@ -3,19 +3,20 @@
 void IncidenceGraph::setGraph(int V, int E){
     this->V = V;
     this->E = E;
-
     incMatrix = new int*[V];
     weights = new int[E];
-    for (int i = 0; i < V; ++i) {
+    for(int i = 0; i < V; ++i){
+        if(V>900){printf("%d\n",i);}
         incMatrix[i] = new int[E];
-        for (int j = 0; j < E; ++j) {
+        for(int j = 0; j < E; ++j){
             incMatrix[i][j] = 0;
         }
     }
 }
 
 void IncidenceGraph::addEdge(int edgeIndex, int src, int dest, int weight) {
-    if (edgeIndex < E && src < V && dest < V) {
+    if(src == dest) {incMatrix[src][edgeIndex] = 2; return;}
+    if(edgeIndex < E && src < V && dest < V){
         incMatrix[src][edgeIndex] = 1;
         incMatrix[dest][edgeIndex] = 1;
         weights[edgeIndex] = weight;
@@ -23,7 +24,8 @@ void IncidenceGraph::addEdge(int edgeIndex, int src, int dest, int weight) {
 }
 
 void IncidenceGraph::addDirectedEdge(int edgeIndex, int src, int dest, int weight){
-    if (edgeIndex < E && src < V && dest < V) {
+    if(src == dest) {incMatrix[src][edgeIndex] = 2; return;}
+    if(edgeIndex < E && src < V && dest < V){
         incMatrix[src][edgeIndex] = 1;
         incMatrix[dest][edgeIndex] = -1;
         weights[edgeIndex] = weight;
@@ -52,7 +54,7 @@ void IncidenceGraph::printGraph(){
 
 IncidenceGraph::~IncidenceGraph(){
     if(incMatrix != nullptr){
-        for (int i = 0; i < V; ++i) {
+        for (int i = 0; i < V; i++) {
             delete[] incMatrix[i];
         }
         delete[] incMatrix;
