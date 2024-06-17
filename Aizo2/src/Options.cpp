@@ -195,43 +195,54 @@ void Options::print_solution(){
     }
     else{
         if(sp_IM.V > 0){
-            int total = 0;
-            for(int e=0;e<sp_IM.E;e++){
-                total += sp_IM.weights[e];
-            }
-            printf("\n=== Reprezentacja macierzowa ===\n");
-            std::cout << "Uzyskany koszt: " << total << "\n\n";
-            printf("Znaleziona sciezka\n");
-            int vert = 0;
-            for(int e = sp_IM.E-1;e>=0;e--){
-                vert = 0;
-                while(sp_IM.incMatrix[vert][e] != 1){vert++;}
-                printf("%d - ",vert);
-            }
-            int e_v = 0;
-            while(sp_IM.incMatrix[e_v][0] != -1){e_v++;}
+            if(sp_IM.E > 0){
+                int total = 0;
+                for(int e=0;e<sp_IM.E;e++){
+                    total += sp_IM.weights[e];
+                }
+                printf("\n=== Reprezentacja macierzowa ===\n");
+                std::cout << "Uzyskany koszt: " << total << "\n\n";
+                printf("Znaleziona sciezka\n");
+                int vert = 0;
+                for(int e = sp_IM.E-1;e>=0;e--){
+                    vert = 0;
+                    while(sp_IM.incMatrix[vert][e] != 1){vert++;}
+                    printf("%d - ",vert);
+                }
+                int e_v = 0;
+                while(sp_IM.incMatrix[e_v][0] != -1){e_v++;}
 
-            printf("%d",e_v);
-            printf("\n\n================================\n");
-            total = 0;
+                printf("%d",e_v);
+                printf("\n\n================================\n");
+                total = 0;
 
-            AdjListNode* path = sp_L.arr[start_vert].head;
-            while(path){
-                total += path->weight;
-                path = sp_L.arr[path->dest].head;
-            }
-            printf("\n\n==== Reprezentacja listowa ====\n");
-            std::cout << "Uzyskany koszt: " << total << "\n\n";
-            printf("Znaleziona sciezka\n");
-            path = sp_L.arr[start_vert].head;
-            if(start_vert != end_vert){
-                printf("%d",start_vert);
+                AdjListNode* path = sp_L.arr[start_vert].head;
                 while(path){
-                    printf(" - %d",path->dest);
+                    total += path->weight;
                     path = sp_L.arr[path->dest].head;
                 }
+                printf("\n\n==== Reprezentacja listowa ====\n");
+                std::cout << "Uzyskany koszt: " << total << "\n\n";
+                printf("Znaleziona sciezka\n");
+                path = sp_L.arr[start_vert].head;
+                if(start_vert != end_vert){
+                    printf("%d",start_vert);
+                    while(path){
+                        printf(" - %d",path->dest);
+                        path = sp_L.arr[path->dest].head;
+                    }
+                }
             }
-            else{printf("%d",end_vert);}
+            else{
+                printf("\n=== Reprezentacja macierzowa ===\n");
+                std::cout << "Uzyskany koszt: " << 0 << "\n\n";
+                printf("Znaleziona sciezka\n");
+                printf("%d",end_vert);
+                printf("\n\n==== Reprezentacja listowa ====\n");
+                std::cout << "Uzyskany koszt: " << 0 << "\n\n";
+                printf("Znaleziona sciezka\n");
+                printf("%d",end_vert);
+            }
             printf("\n\n===============================\n");
         }
         else{
