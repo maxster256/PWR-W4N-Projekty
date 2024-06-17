@@ -7,11 +7,11 @@
 class MST
 {
     public:
-        void Prim(IncidenceGraph &graph, bool show_res);
-        void Kruskal(IncidenceGraph &graph, bool show_res);
+        IncidenceGraph Prim(const IncidenceGraph &graph);
+        IncidenceGraph Kruskal(const IncidenceGraph &graph);
 
-        void Prim_L(ListGraph &graph, bool show_res);
-        void Kruskal_L(ListGraph &graph, bool show_res);
+        ListGraph Prim_L(const ListGraph &graph);
+        ListGraph Kruskal_L(const ListGraph &graph);
 
         int FindSet(int x, int parent[]);
         void Union(int x, int y, int parent[], int ranks[]);

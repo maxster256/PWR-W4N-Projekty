@@ -8,11 +8,11 @@
 class Shortest_path
 {
     public:
-        void Dijkstra(IncidenceGraph &graph, int start_vert, int end_vert, bool show_res);
-        void Ford_Bellman(IncidenceGraph &graph, int start_vert, int end_vert, bool show_res);
+        IncidenceGraph Dijkstra(IncidenceGraph &graph, int start_vert, int end_vert);
+        IncidenceGraph Ford_Bellman(IncidenceGraph &graph, int start_vert, int end_vert);
 
-        void Dijkstra_L(ListGraph &graph, int start_vert, int end_vert, bool show_res);
-        void Ford_Bellman_L(ListGraph &graph, int start_vert, int end_vert, bool show_res);
+        ListGraph Dijkstra_L(ListGraph &graph, int start_vert, int end_vert);
+        ListGraph Ford_Bellman_L(ListGraph &graph, int start_vert, int end_vert);
     protected:
 
     private:

@@ -10,6 +10,7 @@ class IncidenceGraph
     int** incMatrix = nullptr;
 
         void setGraph(int V, int E);
+        void copy_solution(IncidenceGraph &dest_graph);
         void addEdge(int edgeIndex, int src, int dest, int weight);
         void addDirectedEdge(int edgeIndex, int src, int dest, int weight);
         void printGraph();

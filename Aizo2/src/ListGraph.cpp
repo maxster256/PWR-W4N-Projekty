@@ -9,6 +9,22 @@ void ListGraph::setGraph(int V, int E){
     }
 }
 
+void ListGraph::copy_solution(ListGraph &dest_graph, bool isDirected){
+    dest_graph.setGraph(this->V, this->E);
+    for(int v=0;v<dest_graph.V;v++){
+        AdjListNode* edgesToCopy = this->arr[v].head;
+        while(edgesToCopy){
+            if(isDirected){
+                dest_graph.addDirectedEdge(edgesToCopy->source, edgesToCopy->dest, edgesToCopy->weight);
+            }
+            else if(edgesToCopy->source < edgesToCopy->dest){
+                dest_graph.addEdge(edgesToCopy->source, edgesToCopy->dest, edgesToCopy->weight);
+            }
+            edgesToCopy = edgesToCopy->next;
+        }
+    }
+}
+
 void ListGraph::addEdge(int src, int dest, int weight){
     AdjListNode* newNode = new AdjListNode;
     newNode->source = src;

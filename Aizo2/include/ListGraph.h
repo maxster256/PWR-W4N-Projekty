@@ -20,6 +20,7 @@ class ListGraph{
     int E = -1;
 
         void setGraph(int V, int E);
+        void copy_solution(ListGraph &dest_graph, bool isDirected);
         void addEdge(int src, int dest, int weight);
         void addDirectedEdge(int src, int dest, int weight);
         void printGraph();
