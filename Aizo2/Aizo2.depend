@@ -6,7 +6,7 @@
 	<iostream>
 	<algorithm>
 
-1717779439 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\menu.cpp
+1718618179 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\menu.cpp
 	"Menu.h"
 
 1717530131 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\menu.h
@@ -15,10 +15,10 @@
 	"Input.h"
 	"Options.h"
 
-1718231387 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\options.cpp
+1718618917 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\options.cpp
 	"Options.h"
 
-1717849486 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\options.h
+1718618196 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\options.h
 	<iostream>
 	<fstream>
 	<algorithm>
@@ -36,15 +36,15 @@
 1717527948 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\input.cpp
 	"Input.h"
 
-1718231387 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\mst.cpp
+1718541667 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\mst.cpp
 	"MST.h"
 
-1717618932 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\mst.h
+1718541667 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\mst.h
 	<iostream>
 	"IncidenceGraph.h"
 	"ListGraph.h"
 
-1717763589 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\shortest_path.h
+1718541667 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\shortest_path.h
 	<iostream>
 	<limits.h>
 	"IncidenceGraph.h"
@@ -56,22 +56,89 @@
 	"IncidenceGraph.h"
 	"ListGraph.h"
 
-1718231890 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\shortest_path.cpp
+1718617377 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\shortest_path.cpp
 	"Shortest_path.h"
 	<chrono>
 
 1717537999 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\throughput.cpp
 	"Throughput.h"
 
-1718132284 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\incidencegraph.cpp
+1718451841 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\incidencegraph.cpp
 	"IncidenceGraph.h"
 
-1717530063 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\incidencegraph.h
+1718451406 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\incidencegraph.h
 	<iostream>
 
-1718231514 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\listgraph.cpp
+1718452912 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\src\listgraph.cpp
 	"ListGraph.h"
 
-1717618932 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\listgraph.h
+1718452283 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2\include\listgraph.h
 	<iostream>
+
+1717859486 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\main.cpp
+	"Menu.h"
+
+1717530131 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\include\menu.h
+	<iostream>
+	<cstdlib>
+	"Input.h"
+	"Options.h"
+
+1717527948 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\include\input.h
+	<iostream>
+	<algorithm>
+
+1717849486 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\include\options.h
+	<iostream>
+	<fstream>
+	<algorithm>
+	<chrono>
+	<cstring>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"Input.h"
+	"MST.h"
+	"Shortest_path.h"
+	"IncidenceGraph.h"
+	"ListGraph.h"
+
+1717618932 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\include\mst.h
+	<iostream>
+	"IncidenceGraph.h"
+	"ListGraph.h"
+
+1717530063 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\include\incidencegraph.h
+	<iostream>
+
+1717618932 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\include\listgraph.h
+	<iostream>
+
+1717763589 c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\include\shortest_path.h
+	<iostream>
+	<limits.h>
+	"IncidenceGraph.h"
+	"ListGraph.h"
+
+1718132284 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\src\incidencegraph.cpp
+	"IncidenceGraph.h"
+
+1717527948 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\src\input.cpp
+	"Input.h"
+
+1718231514 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\src\listgraph.cpp
+	"ListGraph.h"
+
+1717779439 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\src\menu.cpp
+	"Menu.h"
+
+1718231387 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\src\mst.cpp
+	"MST.h"
+
+1718304394 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\src\options.cpp
+	"Options.h"
+
+1718304959 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\aizo2t\src\shortest_path.cpp
+	"Shortest_path.h"
+	<chrono>
 

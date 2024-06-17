@@ -6,11 +6,20 @@ void IncidenceGraph::setGraph(int V, int E){
     incMatrix = new int*[V];
     weights = new int[E];
     for(int i = 0; i < V; ++i){
-        if(V>900){printf("%d\n",i);}
         incMatrix[i] = new int[E];
         for(int j = 0; j < E; ++j){
             incMatrix[i][j] = 0;
         }
+    }
+}
+
+void IncidenceGraph::copy_solution(IncidenceGraph &dest_graph){
+    dest_graph.setGraph(this->V, this->E);
+    for(int e=0;e<dest_graph.E;e++){
+        for(int v=0;v<dest_graph.V;v++){
+            dest_graph.incMatrix[v][e] = this->incMatrix[v][e];
+        }
+        dest_graph.weights[e] = this->weights[e];
     }
 }
 

@@ -20,10 +20,10 @@ class Options : public Input{
 private:
     MST mst;
     Shortest_path sp;
-    //Throughput th;
 
-    IncidenceGraph matrix;
-    ListGraph lista;
+    IncidenceGraph matrix, mst_IM, sp_IM;
+    ListGraph lista, mst_L, sp_L;
+
 public:
 
 bool isGenerated = false;
@@ -40,14 +40,15 @@ int problem_type = -1;
     void generate_graph_info();
     void generate_graph(int vertices, int density);
 
-    bool check_edge(int src, int dest);
+    bool check_edge(int src, int dest, ListGraph &lista);
 
     void show_graph();
 
-    void choose_algorithm_info(bool input);
+    void print_solution();
+    bool choose_algorithm_info(bool input);
     void choose_algorithm(bool results);
-    double matrix_algorithms(bool results);
-    double list_algorithms(bool results);
+    double matrix_algorithms();
+    double list_algorithms();
 
     void serie();
     virtual ~Options();
