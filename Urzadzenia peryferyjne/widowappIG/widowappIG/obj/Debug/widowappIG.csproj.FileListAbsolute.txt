@@ -1,0 +1,15 @@
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\bin\Debug\widowappIG.exe.config
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\bin\Debug\widowappIG.exe
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\bin\Debug\widowappIG.pdb
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\obj\Debug\widowappIG.csproj.AssemblyReference.cache
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\obj\Debug\widowappIG.Form1.resources
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\obj\Debug\widowappIG.Properties.Resources.resources
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\obj\Debug\widowappIG.csproj.GenerateResource.cache
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\obj\Debug\widowappIG.csproj.CoreCompileInputs.cache
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\obj\Debug\widowappIG.exe
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\obj\Debug\widowappIG.pdb
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\bin\Debug\Interop.WMPLib.dll
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\obj\Debug\Interop.WMPLib.dll
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Jakub Smolarczyk\source\repos\widowappIG\widowappIG\obj\Debug\widowappIG.csproj.ResolveComReference.cache
