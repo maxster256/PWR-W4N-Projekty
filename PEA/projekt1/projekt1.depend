@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1729273538 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\src\input.cpp
+	"Input.h"
+
+1729274194 c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\include\input.h
+	<iostream>
+	<algorithm>
+
+1729339152 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\src\menu.cpp
+	"Menu.h"
+
+1729273344 c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\include\menu.h
+	"Options.h"
+
+1729339048 c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\include\options.h
+	<iostream>
+	<fstream>
+	<algorithm>
+	<chrono>
+	<climits>
+	<cstring>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<random>
+	"Input.h"
+	"TSPfull.h"
+	"TSPneighbour.h"
+	"TSPrandom.h"
+
+1729335500 c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\include\tspfull.h
+	<vector>
+	<climits>
+	<algorithm>
+
+1729292890 c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\include\tspneighbour.h
+	<vector>
+	<climits>
+
+1729293050 c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\include\tsprandom.h
+	<vector>
+	<climits>
+	<time.h>
+	<random>
+	<algorithm>
+
+1729454245 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\src\options.cpp
+	"Options.h"
+
+1729454414 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\src\tspfull.cpp
+	"TSPfull.h"
+
+1729454414 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\src\tspneighbour.cpp
+	"TSPneighbour.h"
+
+1729454414 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\src\tsprandom.cpp
+	"TSPrandom.h"
+
+1729335395 source:c:\users\jakub smolarczyk\desktop\codeblock\c++\pea1\projekt1\main.cpp
+	"Menu.h"
+	<vector>
+	<time.h>
+

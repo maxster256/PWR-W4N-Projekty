@@ -1,0 +1,9 @@
+random.csv (time in ms):
+-,Asymetryczne,Symetryczne
+Macierz 5,0,0.01
+Macierz 6,0.01,0
+Macierz 7,0.06025,0.05023
+Macierz 8,0.35095,0.46016
+Macierz 9,3.05332,3.02733
+Macierz 10,26.8013,26.6795
+Macierz 11,266.102,266.49

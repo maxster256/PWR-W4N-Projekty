@@ -1,0 +1,9 @@
+neighbour.csv (time in ms):
+-,Asymetryczne,Symetryczne
+Macierz 5,0.0013938,0.0005994
+Macierz 6,0.0019994,0.001394
+Macierz 7,0.0023966,0.003596
+Macierz 8,0.0009966,0.0029992
+Macierz 9,0.001999,0.0025894
+Macierz 10,0.0019982,0.0035946
+Macierz 11,0.0037984,0.0025956

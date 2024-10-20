@@ -1,0 +1,9 @@
+full.csv (time in ms):
+-,Asymetryczne,Symetryczne
+Macierz 5,0.0210421,0.0105263
+Macierz 6,0.0210421,0.0105158
+Macierz 7,0.105179,0.0526211
+Macierz 8,0.843789,0.861137
+Macierz 9,6.44989,6.32494
+Macierz 10,59.1129,58.5272
+Macierz 11,608.039,607.577
